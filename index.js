@@ -5,6 +5,8 @@
  * A simple select input for years based on a range
  */
 const validation = require('./lib/validation.js');
+const yearRange = require('./lib/yearRange.js');
+
 
 /**
  * Single year Input Plugin
@@ -15,6 +17,9 @@ module.exports = {
   description: 'A simple select input for years based on a range',
   validation: {
     yearValidation: validation,
+  },
+  scripts: {
+    yearGenerate: yearRange,
   },
   inputs: {
     year: {
