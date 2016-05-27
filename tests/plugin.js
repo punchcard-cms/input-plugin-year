@@ -22,8 +22,7 @@ const data = {
 test('select fills options', t => {
   // Render html
   const rendered = nunjucks.renderString(plugin.html, data);
-  console.log(rendered);
-  
+
   // check the options
   t.true(contains(rendered, '<option value=\"2005\">2005</option>'), 'Select must contain 2005');
 });
