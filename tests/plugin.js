@@ -16,18 +16,26 @@ const data = {
       minYear: 2000,
       maxYear: 2016,
     },
+    value: 2006,
   },
 };
 
 test('select fills options', t => {
   // Render html
   const rendered = nunjucks.renderString(plugin.html, data);
-
+  console.log(rendered);
   // check the options
-  t.true(contains(rendered, '<option value=\"2005\">2005</option>'), 'Select must contain 2005');
+  t.true(contains(rendered, '<option value=\"2005\" >2005</option>'), 'Select must contain 2005');
 });
 
 test('min and max years are properly set', t => {
   // check the options
   t.true(data.year.settings.minYear < data.year.settings.maxYear, 'Select date ranges are properly formatted');
+});
+
+test('selected attribute given to value', t => {
+  // Render html
+  const rendered = nunjucks.renderString(plugin.html, data);
+  // check the options
+  t.true(contains(rendered, '<option value=\"2006\" selected>2006</option>'), 'value specified must have the \"selected\" attribute');
 });

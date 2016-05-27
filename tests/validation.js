@@ -4,10 +4,14 @@ import validation from '../lib/validation';
 const input = {
   target: {
     name: 'select',
-    value: 'foo bar baz',
+    value: 3,
   },
   all: {
     select: 'foo bar baz',
+  },
+  settings: {
+    min: 0,
+    max: 5,
   },
 };
 
@@ -29,8 +33,6 @@ test('valid input', t => {
 
 // Invalid input
 test('validate correct input', t => {
-  const ip = input;
-  ip.target.value = '';
-
-  t.is(validation(ip, settings), 'select cannot be left blank!', 'Return string if not valid');
+  input.target.value = '';
+  t.is(validation(input, settings), 'select cannot be left blank!', 'Return string if not valid');
 });

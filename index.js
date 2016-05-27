@@ -34,5 +34,5 @@ module.exports = {
       },
     },
   },
-  html: '<label for="{{year.id}}">{{year.label}}</label><select id="{{year.id}}" name="{{year.name}}">{% for i in range(year.settings.minYear, year.settings.maxYear) -%}<option value="{{ i }}">{{ i }}</option>{%- endfor %}</select></label>',
+  html: '<label for="{{year.id}}">{{year.label}}</label><select id="{{year.id}}" name="{{year.name}}">{% for i in range(year.settings.minYear, year.settings.maxYear) -%}<option value="{{ i }}" {% if i == year.value %}selected{% endif %}>{{ i }}</option>{%- endfor %}</select></label>',
 };
