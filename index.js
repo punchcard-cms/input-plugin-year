@@ -7,7 +7,6 @@
  * A simple select input for years based on a range
  */
 const validation = require('./lib/validation.js');
-const yearRange = require('./lib/yearRange.js');
 
 
 /**
@@ -20,9 +19,6 @@ module.exports = {
   validation: {
     yearValidation: validation,
   },
-  scripts: {
-    yearGenerate: yearRange,
-  },
   inputs: {
     year: {
       validation: {
@@ -31,15 +27,12 @@ module.exports = {
       },
       label: 'Please choose a year',
       placeholder: 'year',
-      options: {
-        minYear: '1900',
-        maxYear: '2016',
-      },
       type: 'select',
       settings: {
-        empty: true,
+        minYear: 2000,
+        maxYear: 2016,
       },
     },
   },
-  html: '<label for="{{year.id}}">{{year.label}}</label><select id="{{year.id}}" name="{{year.name}}"><option value="{{year.value}}"  class="year-range"></option></select></label>',
+  html: '<label for="{{year.id}}">{{year.label}}</label><select id="{{year.id}}" name="{{year.name}}">{% for i in range(year.settings.minYear, year.settings.maxYear) -%}<option value="{{ i }}">{{ i }}</option>{%- endfor %}</select></label>',
 };

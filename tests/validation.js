@@ -3,11 +3,11 @@ import validation from '../lib/validation';
 
 const input = {
   target: {
-    name: 'year',
+    name: 'select',
     value: 'foo bar baz',
   },
   all: {
-    year: 'foo bar baz',
+    select: 'foo bar baz',
   },
 };
 
@@ -16,12 +16,11 @@ const settings = {
     empty: false,
   },
   all: {
-    year: {
+    select: {
       empty: false,
     },
   },
 };
-
 
 // Valid input
 test('valid input', t => {
@@ -33,5 +32,5 @@ test('validate correct input', t => {
   const ip = input;
   ip.target.value = '';
 
-  t.is(validation(ip, settings), 'year cannot be left blank!', 'Return string if not valid');
+  t.is(validation(ip, settings), 'select cannot be left blank!', 'Return string if not valid');
 });

@@ -46,7 +46,7 @@
   },
   "ava": {
     "files": [
-      "tests/*.js"
+      "tests/plugin.js"
     ],
     "failFast": true,
     "tap": true
