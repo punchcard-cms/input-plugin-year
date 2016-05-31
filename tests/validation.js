@@ -15,6 +15,20 @@ const input = {
   },
 };
 
+const badInput = {
+  target: {
+    name: 'select',
+    value: 6,
+  },
+  all: {
+    select: 'foo bar baz',
+  },
+  settings: {
+    min: 0,
+    max: 5,
+  },
+};
+
 const settings = {
   target: {
     empty: false,
@@ -35,4 +49,9 @@ test('valid input', t => {
 test('validate correct input', t => {
   input.target.value = '';
   t.is(validation(input, settings), 'select cannot be left blank!', 'Return string if not valid');
+});
+
+// Valid bad input returns error
+test('validate number out of range', t => {
+  t.is(validation(badInput, settings), 'select should be within range!', 'Return string if not valid');
 });
