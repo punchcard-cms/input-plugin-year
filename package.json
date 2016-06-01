@@ -1,0 +1,54 @@
+{
+  "name": "input-plugin-year",
+  "version": "0.0.1",
+  "description": "A simple select input for years based on a range",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run nyc",
+    "pretest": "npm run lint",
+    "ava": "ava | tap-diff",
+    "ava:watch": "ava --watch | tap-diff",
+    "nyc": "nyc --all npm run ava",
+    "lint": "eslint index.js lib && eslint -c ./.eslintrc-ava.yml tests",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:punchcard-cms/input-plugin-year.git"
+  },
+  "contributors": [
+    "Rachel White <whiter@us.ibm.com>"
+  ],
+  "license": "Apache-2",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "coveralls": "^2.11.9",
+    "eslint": "^2.10.0",
+    "eslint-config-punchcard": "^1.0.1",
+    "nyc": "^6.0.0",
+    "punchcard-content-types": "^0.1.0",
+    "tap-diff": "^0.1.1",
+    "validator": "^5.2.0"
+  },
+  "engines": {
+    "node": "5.7",
+    "npm": "^3.6"
+  },
+  "keywords": [
+    "input-plugin",
+    "punchcard-cms"
+  ],
+  "nyc": {
+    "exclude": [
+      "tests/**/*"
+    ]
+  },
+  "ava": {
+    "files": [
+      "tests/*.js"
+    ],
+    "failFast": true,
+    "tap": true
+  }
+}
