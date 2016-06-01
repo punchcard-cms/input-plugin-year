@@ -23,6 +23,7 @@ const data = {
 test('select fills options', t => {
   const rendered = nunjucks.renderString(plugin.html, data);
   t.true(contains(rendered, '<option value=\"2005\" >2005</option>'), 'Select must contain 2005');
+  t.false(contains(rendered, '<option value=\"1999\" >1999</option>'), 'Rendered output does not contain outside range years');
 });
 
 test('min and max years are properly set', t => {
