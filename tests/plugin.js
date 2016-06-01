@@ -33,3 +33,11 @@ test('selected attribute given to value', t => {
   const rendered = nunjucks.renderString(plugin.html, data);
   t.true(contains(rendered, '<option value=\"2006\" selected>2006</option>'), 'value specified must have the \"selected\" attribute');
 });
+
+test('input year is not below the year minimum', t => {
+  t.false(data.value < data.year.settings.minYear, 'Select date is within the proper range');
+});
+
+test('input year is not above the year maximum', t => {
+  t.false(data.value > data.year.settings.maxYear, 'Select date is within the proper range');
+});
