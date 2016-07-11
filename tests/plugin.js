@@ -1,11 +1,11 @@
 import test from 'ava';
-import contentTypes from 'punchcard-content-types';
+import tests from 'punchcard-shared-tests';
 import nunjucks from 'nunjucks';
 import contains from 'validator/lib/contains';
 
 import plugin from '../';
 
-contentTypes.pluginTests(test, plugin);
+tests.plugins(test, plugin);
 
 const data = {
   year: {

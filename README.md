@@ -1,4 +1,4 @@
-Year Input Plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+Year Input Plugin [![Build Status](https://travis-ci.org/punchcard-cms/input-plugin-year.svg?branch=master)](https://travis-ci.org/punchcard-cms/input-plugin-year) [![Coverage Status](https://coveralls.io/repos/github/punchcard-cms/input-plugin-year/badge.svg?branch=master)](https://coveralls.io/github/punchcard-cms/input-plugin-year?branch=master) [![NSP Status](https://nodesecurity.io/orgs/punchcard-cms/projects/b79fe19b-7d67-4e30-a39b-76e47f0091b8/badge)](https://nodesecurity.io/orgs/punchcard-cms/projects/b79fe19b-7d67-4e30-a39b-76e47f0091b8)
 ---
 
 A simple select input for years based on a range
@@ -7,11 +7,3 @@ A simple select input for years based on a range
 
 Apache-2.0
 
-[npm-image]: https://badge.fury.io/js/input-plugin-year.svg
-[npm-url]: https://npmjs.org/package/input-plugin-year
-[travis-image]: https://travis-ci.org/punchcard-cms/input-plugin-year.svg
-[travis-url]: https://travis-ci.org/punchcard-cms/input-plugin-year
-[daviddm-image]: https://david-dm.org/punchcard-cms/input-plugin-year.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/punchcard-cms/input-plugin-year
-[coveralls-image]: https://coveralls.io/repos/punchcard-cms/input-plugin-year/badge.svg
-[coveralls-url]: https://coveralls.io/r/punchcard-cms/input-plugin-year
