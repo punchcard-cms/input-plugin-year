@@ -34,8 +34,9 @@ const settings = {
     empty: false,
   },
   all: {
-    select: {
-      empty: false,
+    year: {
+      min: 0,
+      max: 5,
     },
   },
 };
@@ -43,12 +44,6 @@ const settings = {
 // Valid input
 test('valid input', t => {
   t.true(validation(input, settings), 'Valid input returns true');
-});
-
-// Invalid input
-test('validate correct input', t => {
-  input.target.value = '';
-  t.is(validation(input, settings), 'select cannot be left blank!', 'Return string if not valid');
 });
 
 // Valid bad input returns error

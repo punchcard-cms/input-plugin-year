@@ -8,7 +8,6 @@
  */
 const validation = require('./lib/validation.js');
 
-
 /**
  * Single year Input Plugin
  * @module yearInputPlugin
@@ -29,10 +28,10 @@ module.exports = {
       placeholder: 'year',
       type: 'select',
       settings: {
-        minYear: 2000,
-        maxYear: 2016,
+        min: 2000,
+        max: 2016,
       },
     },
   },
-  html: '<label for="{{year.id}}">{{year.label}}</label><select id="{{year.id}}" name="{{year.name}}">{% for i in range(year.settings.minYear, year.settings.maxYear) -%}<option value="{{ i }}" {% if i == year.value %}selected{% endif %}>{{ i }}</option>{%- endfor %}</select></label>',
+  html: '<label for="{{year.id}}">{{year.label}}</label><select id="{{year.id}}" name="{{year.name}}">{% for i in range(year.settings.min, year.settings.max) -%}<option value="{{ i }}" {% if i == year.value %}selected{% endif %}>{{ i }}</option>{%- endfor %}</select></label>',
 };
