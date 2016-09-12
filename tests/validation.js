@@ -31,7 +31,8 @@ const badInput = {
 
 const settings = {
   target: {
-    empty: false,
+    min: 0,
+    max: 5,
   },
   all: {
     year: {
