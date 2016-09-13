@@ -22,7 +22,7 @@
   "license": "Apache-2",
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "^0.16.0",
     "coveralls": "^2.11.9",
     "eslint": "^3.5.0",
     "eslint-config-punchcard": "^1.0.1",
