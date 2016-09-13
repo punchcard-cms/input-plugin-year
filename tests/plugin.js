@@ -13,8 +13,8 @@ const data = {
     placeholder: 'year',
     type: 'select',
     settings: {
-      minYear: 2000,
-      maxYear: 2016,
+      min: 2000,
+      max: 2016,
     },
     value: 2006,
   },
@@ -27,7 +27,7 @@ test('select fills options', t => {
 });
 
 test('min and max years are properly set', t => {
-  t.true(data.year.settings.minYear < data.year.settings.maxYear, 'Select date ranges are properly formatted');
+  t.true(data.year.settings.min < data.year.settings.max, 'Select date ranges are properly formatted');
 });
 
 test('selected attribute given to value', t => {
@@ -36,9 +36,9 @@ test('selected attribute given to value', t => {
 });
 
 test('input year is not below the year minimum', t => {
-  t.false(data.value < data.year.settings.minYear, 'Select date is within the proper range');
+  t.false(data.value < data.year.settings.min, 'Select date is within the proper range');
 });
 
 test('input year is not above the year maximum', t => {
-  t.false(data.value > data.year.settings.maxYear, 'Select date is within the proper range');
+  t.false(data.value > data.year.settings.max, 'Select date is within the proper range');
 });
