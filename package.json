@@ -33,7 +33,7 @@
     "punchcard-shared-tests": "^1.0.0",
     "semantic-release": "^4.3.5",
     "tap-diff": "^0.1.1",
-    "validator": "^5.2.0"
+    "validator": "^6.0.0"
   },
   "engines": {
     "node": "5.7",
