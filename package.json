@@ -36,8 +36,7 @@
     "validator": "^5.2.0"
   },
   "engines": {
-    "node": "5.7",
-    "npm": "^3.6"
+    "node": "^6"
   },
   "keywords": [
     "input-plugin",
